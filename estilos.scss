@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100,0,200,0,300,0,400,0,500,0,600,0,700,0,800,0,900,1,100,1,200,1,300,1,400,1,500,1,600,1,700,1,800,1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -9,9 +9,9 @@
 $color-principal: #003049;
 $color-secundario: #bddcde;
 $color-terciario: #a8dadc;
-$color-fondos: $color-fondos;
+$color-fondos: #e6eef4;
 $negro: #0c0c0c;
-$blanco: $blanco;
+$blanco: #fefefe;
 
 $logo-font: lighter 24px "Cinzel", serif;
 $sublogo-font: lighter 14px "Cinzel", serif;
@@ -21,7 +21,7 @@ $font-default: 400 normal "Poppins", sans-serif;
 $titulos: 400 normal 48px "Poppins", sans-serif;
 $subtitulos: 400 normal 32px "Poppins", sans-serif;
 $h3: 300 normal 24px "Poppins", sans-serif;
-$body: 400 normal 16px "Poppins", sans-serif;
+$body: 300 normal 16px "Poppins", sans-serif;
 $botones: 400 normal 14px "Poppins", sans-serif;
 
 /*Inicio estilo de Titulos */
@@ -103,22 +103,472 @@ body {
     font-size: 24px;
 }
 
-@import './scss/contacto';
-@import './scss/faqs';
-@import './scss/footer';
-@import './scss/inicio';
-@import './scss/nav';
-@import './scss/sobre-mi';
-@import './scss/tratamientos';
-/* @import './scss';
-@import './scss'; */
+/* nav */
+@media only screen and (min-width:961px) {
+    .titulos-secciones {
+        margin-top: 128px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .titulos-secciones {
+        margin-top: 8px;
+        padding: 8px;
+    }
+}
+
+
+/*Fin estilo de Titulos */
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-between;
+    width: 100%;
+    margin: 0%;
+    min-height: 100vh;
+}
+
+
+@media only screen and (min-width:961px) {
+
+    .section-contacto,
+    .container-perfil {
+        display: flex;
+        flex-direction: column;
+        /* background-color: rgb(80, 80, 80); */
+        background-color: $blanco;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-grow: 1;
+        /* Permite que el main crezca para ocupar el espacio restante */
+        padding: 16px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        /* Ajusta la posición en la parte superior */
+        z-index: 100;
+    }
+
+    .logo-header {
+        background-color: $color-secundario;
+        width: 100%;
+        height: 80px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .titulo-header {
+        font: $logo-font;
+        color: $negro;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sub-header {
+        padding: 8px;
+        font: $sublogo-font;
+        margin: 0px;
+    }
+
+    .linea-vertical {
+        border-left: 1px solid $negro;
+        /* Establece la línea vertical con color negro */
+        height: 24px;
+        /* Ajusta la altura de la línea según sea necesario */
+        margin: auto 0px;
+        /* Centra la línea horizontalmente */
+    }
+
+    .logo {
+        cursor: pointer;
+        /* cuando apoyo cursor visualizo que se puede seleccionar */
+    }
+
+    .navbar {
+        background-color: $color-principal;
+        width: 100%;
+        /* ancho */
+        height: 56px;
+        /* alto */
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        /* la lista no posee viñeta */
+        font: $font-default;
+        margin: 8px;
+    }
+
+    .nav-links li a {
+        padding: 8px 16px;
+        color: $blanco;
+        text-decoration: none;
+    }
+
+    .nav-links li:hover a {
+        color: $color-principal;
+        /* Cambia el color al hacer hover */
+        text-decoration: none;
+        /* No posee subrayado al posicionarse por encima */
+    }
+
+    .nav-links li:hover {
+        background: $blanco;
+        border-radius: 16px;
+    }
+
+    .logo-mobile,
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 960px) {
+    .logo-header {
+        display: none;
+    }
+
+    .titulo-header {
+        font: $logo-font;
+        color: $blanco;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sub-header {
+        padding: 8px;
+        font-family: "Cinzel", serif;
+        font-size: 8px;
+        margin: 0px;
+        color: $blanco;
+    }
+
+    .linea-vertical {
+        border-left: 1px solid $blanco;
+        /* Establece la línea vertical con color negro */
+        height: 16px;
+        /* Ajusta la altura de la línea según sea necesario */
+        margin: auto 0px;
+        /* Centra la línea horizontalmente */
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $blanco;
+        padding: 8px;
+    }
+
+    a:hover {
+        color: $color-terciario;
+        /* Cambia el color al hacer hover */
+        text-decoration: none;
+        /* No posee subrayado al posicionarse por encima */
+
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 24px 8px;
+        background-color: $color-principal;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+}
+
+.navbar-toggler-icon {
+    font-size: 24px;
+    color: $blanco;
+}
+
+/* Fin Nav */
+
+.main-home {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(80, 80, 80); */
+    background-color: $blanco;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.iconos-contacto {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*Inicio Formulario de contacto y datos */
+.contacto {
+    padding: 32px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container-form {
+    background-color: $color-fondos;
+    width: 344px;
+    height: 100%;
+    padding: 16px;
+    margin: 0px;
+    padding: 16px;
+    border-radius: 16px;
+    color: $color-principal;
+    box-shadow: 0px 0px 8px gray;
+}
+
+.btn-primary {
+    background-color: $color-principal;
+    color: $blanco;
+    font: $botones;
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/*Fin Formulario de contacto y datos*/
+
+/*Inicio Grilla para tratamientos */
+.section-tratamientos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo-tarjetas {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #002f4944;
+    text-transform: uppercase;
+    color: $blanco;
+}
+
+.item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+    padding-bottom: 16px;
+    grid-auto-flow: dense;
+    /* busca la manera de acomodar elementos en el grid */
+    /* margin: 0px 156px 0px; */
+    margin: 0px 16px 16px;
+}
+
+@media (min-width: 961px) {
+    .galeria {
+        margin: 0px 156px 0px;
+    }
+
+    .wide {
+        grid-column: span 3;
+    }
+
+    .tall {
+        grid-row: span 2;
+    }
+}
+
+/*Fin Grilla para tratamientos */
+
+/* Inicio FAQs */
+
+@media only screen and (min-width: 992px) {
+    .accordion {
+        margin: 0px 156px 32px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .accordion {
+        margin: 0px 32px 16px;
+    }
+}
+
+.accordion-body {
+    font: $body;
+}
+
+.accordion-item {
+    border-color: $color-principal;
+}
+
+.accordion-button:not(.collapsed) {
+    color: $color-principal;
+    background-color: $color-fondos;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
+
+/* Fin FAQs */
+
+/* Inicio pagina principal */
+.atencion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 32px;
+    gap: 32px;
+}
+
+.titulo-card {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+.card-img-top {
+    height: 190px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-home {
+    border-radius: 8px;
+    border-color: $color-terciario;
+    background-color: $color-fondos;
+}
+
+/* Fin pagina principal */
 
 
 
+/* Inicio footer */
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-secundario;
+    padding: 16px 0;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
 
+.titulo-footer {
+    font: $logo-font;
+    color: $negro;
+    margin: 0px;
+}
 
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px;
+    /* Añade margen superior para separar del contenido anterior */
+}
 
+.social-links a {
+    margin: 0px 16px;
+    text-align: center;
+    color: $negro;
+    font-size: 24px;
+}
 
-
-@import '_footer.scss';
+/* Fin footer */
