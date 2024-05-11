@@ -1,13 +1,12 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100,0,200,0,300,0,400,0,500,0,600,0,700,0,800,0,900,1,100,1,200,1,300,1,400,1,500,1,600,1,700,1,800,1,900&display=swap");
-@media only screen and (min-width: 961px) {
+@import './estilos.scss';
+
+@media only screen and (min-width:961px) {
 
     .section-contacto,
     .container-perfil {
         display: flex;
         flex-direction: column;
-        /* background-color: rgb(80, 80, 80); */
-        background-color: #fefefe;
+        background-color: $blanco;
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -27,8 +26,7 @@
     }
 
     .logo-header {
-        /*   background-color: #fffae0; */
-        background-color: #bddcde;
+        background-color: $color-secundario;
         width: 100%;
         height: 80px;
         padding-top: 24px;
@@ -40,102 +38,8 @@
     }
 
     .titulo-header {
-        font: lighter 24px "Cinzel", serif;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sub-logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .sub-header {
-        font: lighter 14px "Cinzel", serif;
-    }
-
-    .linea-vertical {
-        border-left: 1px solid #0c0c0c;
-        /* Establece la línea vertical con color negro */
-        height: 24px;
-        /* Ajusta la altura de la línea según sea necesario */
-        margin: auto 0px;
-        /* Centra la línea horizontalmente */
-    }
-
-    .logo {
-        cursor: pointer;
-        /* cuando apoyo cursor visualizo que se puede seleccionar */
-    }
-
-    .navbar {
-        background-color: #003049;
-        width: 100%;
-        /* ancho */
-        height: 56px;
-        /* alto */
-        padding: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: center;
-        align-content: center;
-        /* la lista no posee viñeta */
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin: 8px;
-    }
-
-    .nav-links li a {
-        padding: 8px 16px;
-        color: #fefefe;
-        text-decoration: none;
-    }
-
-    .nav-links li:hover a {
-        color: #111c1d;
-        /* Cambia el color al hacer hover */
-        text-decoration: none;
-        /* No posee subrayado al posicionarse por encima */
-    }
-
-    .nav-links li:hover {
-        background: #fefefe;
-        border-radius: 16px;
-    }
-
-    .logo-mobile,
-    .navbar-toggler {
-        display: none;
-    }
-}
-
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 960px) {
-    .logo-header {
-        display: none;
-    }
-
-    .titulo-header {
-        font-family: "Cinzel", serif;
-        font-size: 16px;
-        font-weight: lighter;
-        color: #fefefe;
+        font: $logo-font;
+        color: $negro;
         padding: 0px;
         margin: 0px;
     }
@@ -156,14 +60,110 @@
 
     .sub-header {
         padding: 8px;
-        font-family: "Cinzel", serif;
-        font-size: 8px;
+        font: $sublogo-font;
         margin: 0px;
-        color: #fefefe;
     }
 
     .linea-vertical {
-        border-left: 1px solid #fefefe;
+        border-left: 1px solid $negro;
+        /* Establece la línea vertical con color negro */
+        height: 24px;
+        /* Ajusta la altura de la línea según sea necesario */
+        margin: auto 0px;
+        /* Centra la línea horizontalmente */
+    }
+
+    .logo {
+        cursor: pointer;
+        /* cuando apoyo cursor visualizo que se puede seleccionar */
+    }
+
+    .navbar {
+        background-color: $color-principal;
+        width: 100%;
+        /* ancho */
+        height: 56px;
+        /* alto */
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        /* la lista no posee viñeta */
+        font: $font-default;
+        margin: 8px;
+    }
+
+    .nav-links li a {
+        padding: 8px 16px;
+        color: $blanco;
+        text-decoration: none;
+    }
+
+    .nav-links li:hover a {
+        color: $color-principal;
+        /* Cambia el color al hacer hover */
+        text-decoration: none;
+        /* No posee subrayado al posicionarse por encima */
+    }
+
+    .nav-links li:hover {
+        background: $blanco;
+        border-radius: 16px;
+    }
+
+    .logo-mobile,
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 960px) {
+    .logo-header {
+        display: none;
+    }
+
+    .titulo-header {
+        font: $logo-font;
+        color: $blanco;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sub-header {
+        padding: 8px;
+        font: $sublogo-font;
+        margin: 0px;
+        color: $blanco;
+    }
+
+    .linea-vertical {
+        border-left: 1px solid $blanco;
         /* Establece la línea vertical con color negro */
         height: 16px;
         /* Ajusta la altura de la línea según sea necesario */
@@ -177,15 +177,16 @@
 
     a {
         text-decoration: none;
-        color: #fefefe;
+        color: $blanco;
         padding: 8px;
     }
 
     a:hover {
-        color: #a8dadc;
+        color: $color-terciario;
         /* Cambia el color al hacer hover */
         text-decoration: none;
         /* No posee subrayado al posicionarse por encima */
+
     }
 
     .navbar {
@@ -193,7 +194,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 8px 24px 8px;
-        background-color: #003049;
+        background-color: $color-principal;
     }
 
     nav.open ul {
@@ -203,9 +204,7 @@
 
 .navbar-toggler-icon {
     font-size: 24px;
-    color: #fefefe;
+    color: $blanco;
 }
 
 /* Fin Nav */
-
-/*# sourceMappingURL=estilos.css.map */

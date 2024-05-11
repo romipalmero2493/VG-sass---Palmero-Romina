@@ -1,0 +1,37 @@
+@import '../estilos.scss';
+
+/* Inicio FAQs */
+
+@media only screen and (min-width: 992px) {
+    .accordion {
+        margin: 0px 156px 32px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .accordion {
+        margin: 0px 32px 16px;
+    }
+}
+
+/* .accordion {
+    margin: 0px 156px;
+} */
+
+.accordion-body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.accordion-item {
+    border-color: $color-principal;
+}
+
+.accordion-button:not(.collapsed) {
+    color: $color-principal;
+    background-color: #deedee;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
+
+/* Fin FAQs */
