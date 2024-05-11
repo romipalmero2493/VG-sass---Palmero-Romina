@@ -1,0 +1,68 @@
+/*Inicio Grilla para tratamientos */
+.section-tratamientos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    /* Permite que el main crezca para ocupar el espacio restante */
+    margin-top: 128px;
+    padding: 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo-tarjetas {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #002f4944;
+    text-transform: uppercase;
+    color: $blanco;
+}
+
+.item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+    padding-bottom: 16px;
+    grid-auto-flow: dense;
+    /* busca la manera de acomodar elementos en el grid */
+    /* margin: 0px 156px 0px; */
+    margin: 0px 16px 16px;
+}
+
+@media (min-width: 961px) {
+    .galeria {
+        margin: 0px 156px 0px;
+    }
+
+    .wide {
+        grid-column: span 3;
+    }
+
+    .tall {
+        grid-row: span 2;
+    }
+}
+
+/*Fin Grilla para tratamientos */
