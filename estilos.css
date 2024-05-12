@@ -6,55 +6,6 @@
   box-sizing: border-box;
 }
 
-/*Inicio estilo de Titulos */
-h1 {
-  font: 400 normal 48px "Poppins", sans-serif;
-  margin: 0px;
-  padding: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #0c0c0c;
-}
-
-h2 {
-  font: 400 normal 32px "Poppins", sans-serif;
-  margin: 0px;
-  padding: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #0c0c0c;
-}
-
-h3 {
-  font: 300 normal 24px "Poppins", sans-serif;
-  margin: 0px;
-  padding: 8px;
-  text-align: center;
-  color: #0c0c0c;
-}
-
-h4,
-p {
-  font: 300 normal 16px "Poppins", sans-serif;
-  color: #0c0c0c;
-  margin: 0px;
-  padding: 16px 8px;
-  text-align: center;
-}
-
-@media only screen and (min-width: 961px) {
-  .titulos-secciones {
-    margin-top: 128px;
-    padding: 8px;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .titulos-secciones {
-    margin-top: 8px;
-    padding: 8px;
-  }
-}
-/*Fin estilo de Titulos */
 @media only screen and (min-width: 961px) {
   .section-contacto,
   .container-perfil {
@@ -241,6 +192,55 @@ p {
 }
 
 /* Fin FAQs */
+/*Inicio estilo de Titulos */
+h1 {
+  font: 400 normal 48px "Poppins", sans-serif;
+  margin: 0px;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+
+h2 {
+  font: 400 normal 32px "Poppins", sans-serif;
+  margin: 0px;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+
+h3 {
+  font: 300 normal 24px "Poppins", sans-serif;
+  margin: 0px;
+  padding: 8px;
+  text-align: center;
+  color: #0c0c0c;
+}
+
+h4,
+p {
+  font: 300 normal 16px "Poppins", sans-serif;
+  color: #0c0c0c;
+  margin: 0px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 961px) {
+  .titulos-secciones {
+    margin-top: 128px;
+    padding: 8px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .titulos-secciones {
+    margin-top: 8px;
+    padding: 8px;
+  }
+}
+/*Fin estilo de Titulos */
 @media only screen and (min-width: 961px) {
   .titulos-secciones {
     margin-top: 128px;
@@ -275,25 +275,22 @@ p {
   padding: 32px;
   gap: 32px;
 }
-
-.titulo-card {
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-bottom: 8px;
+.atencion .card-home {
+  border-radius: 8px;
+  border-color: #a8dadc;
+  background-color: #e6eef4;
 }
-
-.card-img-top {
+.atencion .card-home .card-img-top {
   height: 190px;
   width: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.card-home {
-  border-radius: 8px;
-  border-color: #a8dadc;
-  background-color: #e6eef4;
+.atencion .card-home .titulo-card {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 8px;
 }
 
 /* Fin pagina principal */
@@ -327,43 +324,6 @@ footer .text-center {
 
 /* Fin footer */
 /*Inicio Grilla para tratamientos */
-.section-tratamientos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  /* Permite que el main crezca para ocupar el espacio restante */
-  margin-top: 128px;
-  padding: 16px;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.titulo-tarjetas {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: rgba(0, 47, 73, 0.2666666667);
-  text-transform: uppercase;
-  color: #fefefe;
-}
-
-.item:hover {
-  filter: opacity(0.9);
-  transform: scale(1.04);
-}
-
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -375,29 +335,51 @@ footer .text-center {
   /* margin: 0px 156px 0px; */
   margin: 0px 16px 16px;
 }
+.galeria .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.galeria .item:hover {
+  filter: opacity(0.9);
+  transform: scale(1.04);
+}
+.galeria .item .titulo-tarjetas {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgba(0, 47, 73, 0.2666666667);
+  text-transform: uppercase;
+  color: #fefefe;
+}
 
 @media (min-width: 961px) {
   .galeria {
     margin: 0px 156px 0px;
   }
-  .wide {
+  .galeria .wide {
     grid-column: span 3;
   }
-  .tall {
+  .galeria .tall {
     grid-row: span 2;
   }
 }
 /*Fin Grilla para tratamientos */
-.iconos-contacto {
-  text-align: center;
-  font-size: 24px;
-}
-
+/* .iconos-contacto {
+    text-align: center;
+    font-size: 24px;
+} */
+/* .contacto {
+    padding: 32px;
+} */
 /*Inicio Formulario de contacto y datos */
-.contacto {
-  padding: 32px;
-}
-
 .container {
   display: flex;
   flex-direction: row;
@@ -405,8 +387,7 @@ footer .text-center {
   align-items: center;
   gap: 8px;
 }
-
-.container-form {
+.container .container-form {
   background-color: #e6eef4;
   height: 100%;
   width: 344px;
@@ -417,8 +398,7 @@ footer .text-center {
   color: #003049;
   box-shadow: 0px 0px 8px gray;
 }
-
-.btn-primary {
+.container .container-form .btn-primary {
   background-color: #003049;
   color: #fefefe;
   font: 400 normal 14px "Poppins", sans-serif;
@@ -433,6 +413,4 @@ footer .text-center {
     gap: 8px;
   }
 }
-/*Fin Formulario de contacto y datos*/
-
-/*# sourceMappingURL=estilos.css.map */
+/*Fin Formulario de contacto y datos*//*# sourceMappingURL=estilos.css.map */
