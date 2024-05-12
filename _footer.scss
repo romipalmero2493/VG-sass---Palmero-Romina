@@ -8,26 +8,23 @@ footer {
     padding: 16px 0px;
     width: 100%;
     bottom: 0;
-}
 
-.titulo-footer {
-    font: $logo-font;
-    color: $negro;
-    margin: 0px;
-    padding: 0px;
-}
+    .social-links {
+        @include flex--row;
+        justify-content: center;
+        margin: 8px;
 
-.social-links {
-    @include flex--row;
-    justify-content: center;
-    margin: 8px;
-}
-
-.social-links a {
-    margin: 0px 16px;
-    text-align: center;
-    color: $negro;
-    font-size: 24px;
+        & a {
+            margin: 0px 16px;
+            text-align: center;
+            color: $negro;
+            font-size: 24px;
+        }
+    }
+    .text-center{
+        font:$sublogo-font;
+        color: $negro;
+    }
 }
 
 /* Fin footer */
