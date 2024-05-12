@@ -24,6 +24,11 @@ $h3: 300 normal 24px "Poppins", sans-serif;
 $body: 300 normal 16px "Poppins", sans-serif;
 $botones: 400 normal 14px "Poppins", sans-serif;
 
+@mixin sizes ($width, $height){
+    height: $height;
+    width: $width;
+}
+
 @import '_titulos';
 @import '_nav';
 @import '_faqs';

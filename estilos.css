@@ -55,56 +55,6 @@ p {
   }
 }
 /*Fin estilo de Titulos */
-body {
-  display: flex;
-  flex-flow: column nowrap;
-  align-content: space-between;
-  width: 100%;
-  margin: 0%;
-  min-height: 100vh;
-}
-
-.main-home {
-  display: flex;
-  flex-direction: column;
-  background-color: #fefefe;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-grow: 1;
-  /* Permite que el main crezca para ocupar el espacio restante */
-  margin-top: 128px;
-  padding: 16px;
-}
-
-.iconos-contacto {
-  text-align: center;
-  font-size: 24px;
-}
-
-/* nav */
-@media only screen and (min-width: 961px) {
-  .titulos-secciones {
-    margin-top: 128px;
-    padding: 8px;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .titulos-secciones {
-    margin-top: 8px;
-    padding: 8px;
-  }
-}
-/*Fin estilo de Titulos */
-body {
-  display: flex;
-  flex-flow: column nowrap;
-  align-content: space-between;
-  width: 100%;
-  margin: 0%;
-  min-height: 100vh;
-}
-
 @media only screen and (min-width: 961px) {
   .section-contacto,
   .container-perfil {
@@ -285,128 +235,6 @@ body {
 }
 
 /* Fin Nav */
-.main-home {
-  display: flex;
-  flex-direction: column;
-  /* background-color: rgb(80, 80, 80); */
-  background-color: #fefefe;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-grow: 1;
-  /* Permite que el main crezca para ocupar el espacio restante */
-  margin-top: 128px;
-  padding: 16px;
-}
-
-.iconos-contacto {
-  text-align: center;
-  font-size: 24px;
-}
-
-/*Inicio Formulario de contacto y datos */
-.contacto {
-  padding: 32px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.container-form {
-  background-color: #e6eef4;
-  width: 344px;
-  height: 100%;
-  padding: 16px;
-  margin: 0px;
-  padding: 16px;
-  border-radius: 16px;
-  color: #003049;
-  box-shadow: 0px 0px 8px gray;
-}
-
-.btn-primary {
-  background-color: #003049;
-  color: #fefefe;
-  font: 400 normal 14px "Poppins", sans-serif;
-}
-
-@media only screen and (max-width: 960px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
-}
-/*Fin Formulario de contacto y datos*/
-/*Inicio Grilla para tratamientos */
-.section-tratamientos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  /* Permite que el main crezca para ocupar el espacio restante */
-  margin-top: 128px;
-  padding: 16px;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.titulo-tarjetas {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: rgba(0, 47, 73, 0.2666666667);
-  text-transform: uppercase;
-  color: #fefefe;
-}
-
-.item:hover {
-  filter: opacity(0.9);
-  transform: scale(1.04);
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-  gap: 24px;
-  padding-bottom: 16px;
-  grid-auto-flow: dense;
-  /* busca la manera de acomodar elementos en el grid */
-  /* margin: 0px 156px 0px; */
-  margin: 0px 16px 16px;
-}
-
-@media (min-width: 961px) {
-  .galeria {
-    margin: 0px 156px 0px;
-  }
-  .wide {
-    grid-column: span 3;
-  }
-  .tall {
-    grid-row: span 2;
-  }
-}
-/*Fin Grilla para tratamientos */
 /* Inicio FAQs */
 @media only screen and (min-width: 992px) {
   .accordion {
@@ -433,6 +261,32 @@ body {
 }
 
 /* Fin FAQs */
+@media only screen and (min-width: 961px) {
+  .titulos-secciones {
+    margin-top: 128px;
+    padding: 8px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .titulos-secciones {
+    margin-top: 8px;
+    padding: 8px;
+  }
+}
+.main-home {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(80, 80, 80); */
+  background-color: #fefefe;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-grow: 1;
+  /* Permite que el main crezca para ocupar el espacio restante */
+  margin-top: 128px;
+  padding: 16px;
+}
+
 /* Inicio pagina principal */
 .atencion {
   display: flex;
@@ -498,5 +352,113 @@ footer {
 }
 
 /* Fin footer */
+/*Inicio Grilla para tratamientos */
+.section-tratamientos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  /* Permite que el main crezca para ocupar el espacio restante */
+  margin-top: 128px;
+  padding: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titulo-tarjetas {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgba(0, 47, 73, 0.2666666667);
+  text-transform: uppercase;
+  color: #fefefe;
+}
+
+.item:hover {
+  filter: opacity(0.9);
+  transform: scale(1.04);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 24px;
+  padding-bottom: 16px;
+  grid-auto-flow: dense;
+  /* busca la manera de acomodar elementos en el grid */
+  /* margin: 0px 156px 0px; */
+  margin: 0px 16px 16px;
+}
+
+@media (min-width: 961px) {
+  .galeria {
+    margin: 0px 156px 0px;
+  }
+  .wide {
+    grid-column: span 3;
+  }
+  .tall {
+    grid-row: span 2;
+  }
+}
+/*Fin Grilla para tratamientos */
+.iconos-contacto {
+  text-align: center;
+  font-size: 24px;
+}
+
+/*Inicio Formulario de contacto y datos */
+.contacto {
+  padding: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.container-form {
+  background-color: #e6eef4;
+  width: 344px;
+  height: 100%;
+  padding: 16px;
+  margin: 0px;
+  padding: 16px;
+  border-radius: 16px;
+  color: #003049;
+  box-shadow: 0px 0px 8px gray;
+}
+
+.btn-primary {
+  background-color: #003049;
+  color: #fefefe;
+  font: 400 normal 14px "Poppins", sans-serif;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+/*Fin Formulario de contacto y datos*/
 
 /*# sourceMappingURL=estilos.css.map */
