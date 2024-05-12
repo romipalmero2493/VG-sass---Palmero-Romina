@@ -1,28 +1,26 @@
 /* Inicio footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
+    @include flex--column;
     align-items: center;
     background-color: $color-secundario;
-    padding: 16px 0;
+    margin-top: auto;
+    padding: 16px 0px;
     width: 100%;
     bottom: 0;
-    margin-top: auto;
 }
 
 .titulo-footer {
     font: $logo-font;
     color: $negro;
     margin: 0px;
+    padding: 0px;
 }
 
 .social-links {
-    display: flex;
-    flex-direction: row;
+    @include flex--row;
     justify-content: center;
     margin: 8px;
-    /* Añade margen superior para separar del contenido anterior */
 }
 
 .social-links a {

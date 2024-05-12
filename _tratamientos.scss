@@ -1,7 +1,6 @@
 /*Inicio Grilla para tratamientos */
 .section-tratamientos {
-    display: flex;
-    flex-direction: column;
+    @include flex--column;
     align-items: center;
     flex-grow: 1;
     /* Permite que el main crezca para ocupar el espacio restante */

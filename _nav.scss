@@ -1,25 +1,17 @@
-
-
-
 @media only screen and (min-width:961px) {
 
     .section-contacto,
     .container-perfil {
-        display: flex;
-        flex-direction: column;
-        /* background-color: rgb(80, 80, 80); */
-        background-color: $blanco;
-        justify-content: center;
+        @include column--center;
         align-items: center;
-        align-content: center;
+        background-color: $blanco;        
         flex-grow: 1;
         /* Permite que el main crezca para ocupar el espacio restante */
         padding: 16px;
     }
 
     .header {
-        display: flex;
-        flex-direction: column;
+        @include flex--column;
         width: 100%;
         position: fixed;
         top: 0;
@@ -28,15 +20,11 @@
     }
 
     .logo-header {
+        @include column--center;
         background-color: $color-secundario;
-        width: 100%;
-        height: 80px;
+        @include sizes (100%, 80px);
         padding-top: 24px;
-        padding-bottom: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        padding-bottom: 16px;        
     }
 
     .titulo-header {
@@ -47,17 +35,13 @@
     }
 
     .logo {
-        display: flex;
-        flex-direction: row;
+        @include flex--row;
         justify-content: center;
         align-items: center;
     }
 
     .sub-logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
+        @include row--center;
     }
 
     .sub-header {
@@ -81,25 +65,15 @@
     }
 
     .navbar {
+        @include column--center;
         background-color: $color-principal;
-        width: 100%;
-        /* ancho */
-        height: 56px;
-        /* alto */
+        @include sizes(100%, 56px);
         padding: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-
     }
 
     .nav-links {
-        display: flex;
-        flex-direction: row;
+        @include row--center;
         list-style: none;
-        justify-content: center;
-        align-content: center;
         /* la lista no posee viñeta */
         font: $font-default;
         margin: 8px;
@@ -144,17 +118,13 @@
     }
 
     .logo {
-        display: flex;
-        flex-direction: row;
+        @include flex--row;
         justify-content: center;
         align-items: center;
     }
 
     .sub-logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
+        @include row--center;
     }
 
     .sub-header {
@@ -193,8 +163,7 @@
     }
 
     .navbar {
-        display: flex;
-        flex-direction: row;
+        @include flex--row;
         justify-content: space-between;
         padding: 8px 24px 8px;
         background-color: $color-principal;

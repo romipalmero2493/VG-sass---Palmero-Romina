@@ -24,9 +24,33 @@ $h3: 300 normal 24px "Poppins", sans-serif;
 $body: 300 normal 16px "Poppins", sans-serif;
 $botones: 400 normal 14px "Poppins", sans-serif;
 
-@mixin sizes ($width, $height){
+@mixin sizes ($width, $height) {
     height: $height;
     width: $width;
+}
+
+@mixin flex--column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex--row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin row--center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin column--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 @import '_titulos';
@@ -36,4 +60,3 @@ $botones: 400 normal 14px "Poppins", sans-serif;
 @import '_footer';
 @import '_tratamientos';
 @import 'contacto';
-@import 'sobre-mi';
