@@ -282,7 +282,7 @@ p {
 }
 .atencion .card-home .card-img-top {
   height: 190px;
-  width: auto;
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
