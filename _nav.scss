@@ -4,7 +4,7 @@
     .container-perfil {
         @include column--center;
         align-items: center;
-        background-color: $blanco;        
+        background-color: $blanco;
         flex-grow: 1;
         /* Permite que el main crezca para ocupar el espacio restante */
         padding: 16px;
@@ -15,93 +15,83 @@
         width: 100%;
         position: fixed;
         top: 0;
-        /* Ajusta la posición en la parte superior */
         z-index: 100;
-    }
 
-    .logo-header {
-        @include column--center;
-        background-color: $color-secundario;
-        @include sizes (100%, 80px);
-        padding-top: 24px;
-        padding-bottom: 16px;        
-    }
+        .logo-header {
+            @include column--center;
+            background-color: $color-secundario;
+            @include sizes(100%, 80px);
+            padding-top: 24px;
+            padding-bottom: 16px;
 
-    .titulo-header {
-        font: $logo-font;
-        color: $negro;
-        padding: 0px;
-        margin: 0px;
-    }
+            .logo {
+                @include flex--row;
+                justify-content: center;
+                align-items: center;
+            }
 
-    .logo {
-        @include flex--row;
-        justify-content: center;
-        align-items: center;
-    }
+            .sub-logo {
+                @include row--center;
+            }
 
-    .sub-logo {
-        @include row--center;
-    }
+            .titulo-header {
+                font: $logo-font;
+                color: $negro;
+                padding: 0px;
+                margin: 0px;
+            }
 
-    .sub-header {
-        padding: 8px;
-        font: $sublogo-font;
-        margin: 0px;
-    }
+            .sub-header {
+                padding: 8px;
+                font: $sublogo-font;
+                margin: 0px;
+            }
 
-    .linea-vertical {
-        border-left: 1px solid $negro;
-        /* Establece la línea vertical con color negro */
-        height: 24px;
-        /* Ajusta la altura de la línea según sea necesario */
-        margin: auto 0px;
-        /* Centra la línea horizontalmente */
-    }
+            .linea-vertical {
+                border-left: 1px solid $negro;
+                height: 24px;
+                margin: auto 0px;
+            }
+        }
 
-    .logo {
-        cursor: pointer;
-        /* cuando apoyo cursor visualizo que se puede seleccionar */
-    }
+        .navbar {
+            @include column--center;
+            background-color: $color-principal;
+            @include sizes(100%, 56px);
+            padding: 8px;
 
-    .navbar {
-        @include column--center;
-        background-color: $color-principal;
-        @include sizes(100%, 56px);
-        padding: 8px;
-    }
+            .nav-links {
+                @include row--center;
+                list-style: none;
+                font: $font-default;
+                margin: 8px;
 
-    .nav-links {
-        @include row--center;
-        list-style: none;
-        /* la lista no posee viñeta */
-        font: $font-default;
-        margin: 8px;
-    }
+                li a {
+                    padding: 8px 16px;
+                    /* color: $blanco; */
+                    color: $blanco;
+                    text-decoration: none;
 
-    .nav-links li a {
-        padding: 8px 16px;
-        color: $blanco;
-        text-decoration: none;
-    }
+                    &:hover {
+                        color: $color-principal;
+                        text-decoration: none;
+                    }
+                }
 
-    .nav-links li:hover a {
-        color: $color-principal;
-        /* Cambia el color al hacer hover */
-        text-decoration: none;
-        /* No posee subrayado al posicionarse por encima */
-    }
+                li:hover {
+                    background: $blanco;
+                    border-radius: 16px;
+                }
+            }
 
-    .nav-links li:hover {
-        background: $blanco;
-        border-radius: 16px;
-    }
-
-    .logo-mobile,
-    .navbar-toggler {
-        display: none;
+            .logo-mobile,
+            .navbar-toggler {
+                display: none;
+            }
+        }
     }
 }
+
 
 
 /* Estilos para dispositivos móviles */
@@ -137,29 +127,23 @@
 
     .linea-vertical {
         border-left: 1px solid $blanco;
-        /* Establece la línea vertical con color negro */
         height: 16px;
-        /* Ajusta la altura de la línea según sea necesario */
         margin: auto 0px;
-        /* Centra la línea horizontalmente */
     }
 
     .nav-links {
         display: none;
-    }
 
-    a {
-        text-decoration: none;
-        color: $blanco;
-        padding: 8px;
-    }
+        a {
+            text-decoration: none;
+            color: $blanco;
+            padding: 8px;
 
-    a:hover {
-        color: $color-terciario;
-        /* Cambia el color al hacer hover */
-        text-decoration: none;
-        /* No posee subrayado al posicionarse por encima */
-
+            &:hover {
+                color: $color-terciario;
+                text-decoration: none;
+            }
+        }
     }
 
     .navbar {
@@ -167,16 +151,14 @@
         justify-content: space-between;
         padding: 8px 24px 8px;
         background-color: $color-principal;
+
+        nav.open ul {
+            display: flex;
+        }
     }
 
-    nav.open ul {
-        display: flex;
+    .navbar-toggler-icon {
+        font-size: 24px;
+        color: $blanco;
     }
 }
-
-.navbar-toggler-icon {
-    font-size: 24px;
-    color: $blanco;
-}
-
-/* Fin Nav */

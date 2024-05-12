@@ -74,10 +74,9 @@ p {
     width: 100%;
     position: fixed;
     top: 0;
-    /* Ajusta la posición en la parte superior */
     z-index: 100;
   }
-  .logo-header {
+  .header .logo-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,42 +87,35 @@ p {
     padding-top: 24px;
     padding-bottom: 16px;
   }
-  .titulo-header {
-    font: lighter 24px "Cinzel", serif;
-    color: #0c0c0c;
-    padding: 0px;
-    margin: 0px;
-  }
-  .logo {
+  .header .logo-header .logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .sub-logo {
+  .header .logo-header .sub-logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
   }
-  .sub-header {
+  .header .logo-header .titulo-header {
+    font: lighter 24px "Cinzel", serif;
+    color: #0c0c0c;
+    padding: 0px;
+    margin: 0px;
+  }
+  .header .logo-header .sub-header {
     padding: 8px;
     font: lighter 14px "Cinzel", serif;
     margin: 0px;
   }
-  .linea-vertical {
+  .header .logo-header .linea-vertical {
     border-left: 1px solid #0c0c0c;
-    /* Establece la línea vertical con color negro */
     height: 24px;
-    /* Ajusta la altura de la línea según sea necesario */
     margin: auto 0px;
-    /* Centra la línea horizontalmente */
   }
-  .logo {
-    cursor: pointer;
-    /* cuando apoyo cursor visualizo que se puede seleccionar */
-  }
-  .navbar {
+  .header .navbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,33 +125,31 @@ p {
     width: 100%;
     padding: 8px;
   }
-  .nav-links {
+  .header .navbar .nav-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     list-style: none;
-    /* la lista no posee viñeta */
     font: 400 normal "Poppins", sans-serif;
     margin: 8px;
   }
-  .nav-links li a {
+  .header .navbar .nav-links li a {
     padding: 8px 16px;
+    /* color: $blanco; */
     color: #fefefe;
     text-decoration: none;
   }
-  .nav-links li:hover a {
+  .header .navbar .nav-links li a:hover {
     color: #003049;
-    /* Cambia el color al hacer hover */
     text-decoration: none;
-    /* No posee subrayado al posicionarse por encima */
   }
-  .nav-links li:hover {
+  .header .navbar .nav-links li:hover {
     background: #fefefe;
     border-radius: 16px;
   }
-  .logo-mobile,
-  .navbar-toggler {
+  .header .navbar .logo-mobile,
+  .header .navbar .navbar-toggler {
     display: none;
   }
 }
@@ -195,25 +185,20 @@ p {
   }
   .linea-vertical {
     border-left: 1px solid #fefefe;
-    /* Establece la línea vertical con color negro */
     height: 16px;
-    /* Ajusta la altura de la línea según sea necesario */
     margin: auto 0px;
-    /* Centra la línea horizontalmente */
   }
   .nav-links {
     display: none;
   }
-  a {
+  .nav-links a {
     text-decoration: none;
     color: #fefefe;
     padding: 8px;
   }
-  a:hover {
+  .nav-links a:hover {
     color: #a8dadc;
-    /* Cambia el color al hacer hover */
     text-decoration: none;
-    /* No posee subrayado al posicionarse por encima */
   }
   .navbar {
     display: flex;
@@ -222,16 +207,14 @@ p {
     padding: 8px 24px 8px;
     background-color: #003049;
   }
-  nav.open ul {
+  .navbar nav.open ul {
     display: flex;
   }
+  .navbar-toggler-icon {
+    font-size: 24px;
+    color: #fefefe;
+  }
 }
-.navbar-toggler-icon {
-  font-size: 24px;
-  color: #fefefe;
-}
-
-/* Fin Nav */
 /* Inicio FAQs */
 @media only screen and (min-width: 992px) {
   .accordion {
