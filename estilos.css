@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+/* ok para prueba de accesibilidad tanto como color de fondo como para texto*/
+/* ok para prueba de accesibilidad como color de fondo*/
+/* ok para prueba de accesibilidad */
+/* ok para prueba de accesibilidad */
 @media only screen and (min-width: 961px) {
   .section-contacto,
   .container-perfil {
@@ -413,6 +417,4 @@ footer .text-center {
     gap: 8px;
   }
 }
-/*Fin Formulario de contacto y datos*/
-
-/*# sourceMappingURL=estilos.css.map */
+/*Fin Formulario de contacto y datos*//*# sourceMappingURL=estilos.css.map */
