@@ -86,8 +86,7 @@ p {
         background-color: $color-fondos;
 
         .card-img-top {
-            height: 190px;
-            width: 100%;
+            @include sizes(100%, 190px);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
