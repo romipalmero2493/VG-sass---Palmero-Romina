@@ -1,6 +1,6 @@
 /*Inicio estilo de Titulos */
 h1 {
-    font: $titulos;
+    font: $titulos-font;
     margin: 0px;
     padding: 16px;
     text-align: center;
@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-    font: $subtitulos;
+    font: $subtitulos-font;
     margin: 0px;
     padding: 16px;
     text-align: center;
@@ -18,14 +18,14 @@ h2 {
 }
 
 h3 {
-    font: $h3;
+    font: $body;
     margin: 0px;
     padding: 8px;
     text-align: center;
     color: $negro;
 }
 
-h4,
+
 p {
     font: $body;
     color: $negro;
@@ -71,10 +71,35 @@ p {
     flex-grow: 1;
     /* Permite que el main crezca para ocupar el espacio restante */
     margin-top: 128px;
-    padding: 16px;
+    /* padding: 16px; */
+
+    /* .img-fluid {
+        @include sizes (100%, auto)
+    } */
 }
 
 /* Inicio pagina principal */
+
+/* Inicio Banner */
+
+.banner {
+    height: 100vh;
+    background-image: url(./assets/img/banner.png);
+    background-size: cover;
+    margin-bottom: 8px;
+
+    .cta {
+        width: 45%;
+        padding: 16px;
+        margin: 120px 32px;
+        float: right;
+    }
+}
+
+
+
+/* Fin banner */
+
 .atencion {
     @include row--center;
     padding: 32px;

@@ -198,15 +198,6 @@
 /* Fin FAQs */
 /*Inicio estilo de Titulos */
 h1 {
-  font: 400 normal 48px "Poppins", sans-serif;
-  margin: 0px;
-  padding: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #0c0c0c;
-}
-
-h2 {
   font: 400 normal 32px "Poppins", sans-serif;
   margin: 0px;
   padding: 16px;
@@ -215,15 +206,23 @@ h2 {
   color: #0c0c0c;
 }
 
-h3 {
+h2 {
   font: 300 normal 24px "Poppins", sans-serif;
+  margin: 0px;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+
+h3 {
+  font: 300 normal 16px "Poppins", sans-serif;
   margin: 0px;
   padding: 8px;
   text-align: center;
   color: #0c0c0c;
 }
 
-h4,
 p {
   font: 300 normal 16px "Poppins", sans-serif;
   color: #0c0c0c;
@@ -267,10 +266,28 @@ p {
   flex-grow: 1;
   /* Permite que el main crezca para ocupar el espacio restante */
   margin-top: 128px;
-  padding: 16px;
+  /* padding: 16px; */
+  /* .img-fluid {
+      @include sizes (100%, auto)
+  } */
 }
 
 /* Inicio pagina principal */
+/* Inicio Banner */
+.banner {
+  height: 100vh;
+  background-image: url(./assets/img/banner.png);
+  background-size: cover;
+  margin-bottom: 8px;
+}
+.banner .cta {
+  width: 45%;
+  padding: 16px;
+  margin: 120px 32px;
+  float: right;
+}
+
+/* Fin banner */
 .atencion {
   display: flex;
   flex-direction: row;
