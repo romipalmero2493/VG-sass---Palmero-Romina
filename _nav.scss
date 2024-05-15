@@ -1,5 +1,9 @@
 @media only screen and (min-width:961px) {
 
+    .navbar-nav {
+        display: none;
+    }
+
     .section-contacto,
     .container-perfil {
         @include column--center;
@@ -100,40 +104,43 @@
         display: none;
     }
 
-    .titulo-header {
-        font: $logo-font;
-        color: $blanco;
-        padding: 0px;
-        margin: 0px;
+    .nav-links {
+        display: none;
     }
 
     .logo {
         @include flex--row;
         justify-content: center;
         align-items: center;
+
+        .titulo-header {
+            font: $logo-font;
+            font-size: 20px;
+            color: $blanco;
+            padding: 0px;
+            margin: 0px;
+        }
     }
 
     .sub-logo {
         @include row--center;
+
+        .sub-header {
+            padding: 8px;
+            font-family: "Cinzel", serif;
+            font-size: 10px;
+            margin: 0px;
+            color: $blanco;
+        }
+
+        .linea-vertical {
+            border-left: 1px solid $blanco;
+            height: 16px;
+            margin: auto 0px;
+        }
     }
 
-    .sub-header {
-        padding: 8px;
-        font-family: "Cinzel", serif;
-        font-size: 8px;
-        margin: 0px;
-        color: $blanco;
-    }
-
-    .linea-vertical {
-        border-left: 1px solid $blanco;
-        height: 16px;
-        margin: auto 0px;
-    }
-
-    .nav-links {
-        display: none;
-
+    .navbar-nav {
         a {
             text-decoration: none;
             color: $blanco;
@@ -149,7 +156,7 @@
     .navbar {
         @include flex--row;
         justify-content: space-between;
-        padding: 8px 16px 8px;
+        padding: 8px;
         background-color: $color-principal;
 
         nav.open ul {
@@ -160,6 +167,5 @@
     .navbar-toggler-icon {
         font-size: 24px;
         color: $blanco;
-        padding: 8px;
     }
 }

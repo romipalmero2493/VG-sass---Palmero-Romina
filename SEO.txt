@@ -1,0 +1,4 @@
+1. Agregue los meta keyword y descriptions.
+2. Modifique la disposicion de h1, h2 etc.
+3. Se corroboró que los colores fueran accesibles.
+4. Se le aplico a la carpeta de imagenes una compresion.

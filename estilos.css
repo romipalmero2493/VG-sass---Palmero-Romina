@@ -11,6 +11,9 @@
 /* ok para prueba de accesibilidad */
 /* ok para prueba de accesibilidad */
 @media only screen and (min-width: 961px) {
+  .navbar-nav {
+    display: none;
+  }
   .section-contacto,
   .container-perfil {
     display: flex;
@@ -113,11 +116,8 @@
   .logo-header {
     display: none;
   }
-  .titulo-header {
-    font: lighter 24px "Cinzel", serif;
-    color: #fefefe;
-    padding: 0px;
-    margin: 0px;
+  .nav-links {
+    display: none;
   }
   .logo {
     display: flex;
@@ -125,33 +125,37 @@
     justify-content: center;
     align-items: center;
   }
+  .logo .titulo-header {
+    font: lighter 24px "Cinzel", serif;
+    font-size: 20px;
+    color: #fefefe;
+    padding: 0px;
+    margin: 0px;
+  }
   .sub-logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
   }
-  .sub-header {
+  .sub-logo .sub-header {
     padding: 8px;
     font-family: "Cinzel", serif;
-    font-size: 8px;
+    font-size: 10px;
     margin: 0px;
     color: #fefefe;
   }
-  .linea-vertical {
+  .sub-logo .linea-vertical {
     border-left: 1px solid #fefefe;
     height: 16px;
     margin: auto 0px;
   }
-  .nav-links {
-    display: none;
-  }
-  .nav-links a {
+  .navbar-nav a {
     text-decoration: none;
     color: #fefefe;
     padding: 8px;
   }
-  .nav-links a:hover {
+  .navbar-nav a:hover {
     color: #a8dadc;
     text-decoration: none;
   }
@@ -159,7 +163,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 16px 8px;
+    padding: 8px;
     background-color: #003049;
   }
   .navbar nav.open ul {
@@ -168,7 +172,6 @@
   .navbar-toggler-icon {
     font-size: 24px;
     color: #fefefe;
-    padding: 8px;
   }
 }
 /* Inicio FAQs */
