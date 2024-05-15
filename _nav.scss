@@ -149,7 +149,7 @@
     .navbar {
         @include flex--row;
         justify-content: space-between;
-        padding: 8px 24px 8px;
+        padding: 8px 16px 8px;
         background-color: $color-principal;
 
         nav.open ul {
@@ -160,5 +160,6 @@
     .navbar-toggler-icon {
         font-size: 24px;
         color: $blanco;
+        padding: 8px;
     }
 }

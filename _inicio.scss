@@ -38,7 +38,8 @@ p {
     .titulos-secciones {
         margin-top: 128px;
         padding: 8px;
-    }
+    }       
+        
 }
 
 @media only screen and (max-width: 960px) {
@@ -63,6 +64,12 @@ p {
         margin-top: 128px;
         padding: 8px;
     }
+
+    .atencion {
+        @include row--center;
+        padding: 32px;
+        gap: 32px;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -71,13 +78,16 @@ p {
         padding: 8px;
     }
 
-    .cta{
+    .cta {
         padding: 8px;
     }
 
     .atencion {
         @include column--center;
-}
+        padding: 24px;
+        gap: 32px;
+        align-items: center;
+    }
 }
 
 .main-home {
@@ -86,40 +96,11 @@ p {
     background-color: $blanco;
     flex-grow: 1;
     /* Permite que el main crezca para ocupar el espacio restante */
-
-    /* padding: 16px; */
-
-    /* .img-fluid {
+    .img-fluid {
         @include sizes (100%, auto)
-    } */
-}
-
-
-/* Inicio Banner */
-.banner-2 {
-    position: relative;
-    
-    .cta {
-        position: absolute;
-        top: 50%;
-        right: 0; /* Coloca el texto en el lado derecho */
-        transform: translateY(-90%);
-        text-align: right; /* Alinea el texto a la derecha */
-        padding: 20px; /* Ajusta el espaciado del texto */
-        width: 50%;
-
-        &h1, p, a{
-            margin-bottom: 10px; /* Espaciado entre elementos */
-        }
     }
-
 }
-/* Fin banner */
 
-.atencion {
-    @include row--center;
-    padding: 32px;
-    gap: 32px;
 
     .card-home {
         border-radius: 8px;
@@ -141,12 +122,61 @@ p {
 
     }
 
+/* Banner */
+
+@media only screen and (min-width: 961px){
+    .banner-mobile{
+        display: none;
+    }
+    .banner {
+        @include row--center;
+        background-color: #EBEBEB;
+        border-bottom: 32px solid #A5D6CE;
+
+        .call {
+            @include column--center;
+            width: 50%;
+            height: auto;
+        }
+    }
 }
 
 
 
+@media only screen and (max-width: 960px){
+    .banner{
+        display: none;
+    }
+
+    .banner-mobile {
+        @include column--center;
+        background-color: #EBEBEB;
+        border-bottom: 32px solid #A5D6CE;
+        padding-bottom: 16px;
+
+        .call{
+            @include column--center;
+            padding: 8px;
+            width: 100%;
+            .imagen-banner{
+                width: 50%;
+                align-self: center;
+            
+            }
+        }
+    }  
+    
+}
 
 
 
+.btn {
+    background-color: $color-principal;
+    border: 1px solid $color-principal;
 
-/* Fin pagina principal */
+
+    &:hover {
+        background-color: darken($color-principal, 10%);
+        border: 1px solid $color-principal;
+    }
+}
