@@ -1,11 +1,3 @@
-/* .iconos-contacto {
-    text-align: center;
-    font-size: 24px;
-} */
-/* .contacto {
-    padding: 32px;
-} */
-
 /*Inicio Formulario de contacto y datos */
 
 .container {
@@ -28,15 +20,15 @@
             background-color: $color-principal;
             color: $blanco;
             font: $botones;
+            &:hover {
+                background-color: darken($color-principal, 10%);
+                border: 1px solid $color-principal;
+            }
         }
 
     }
 
 }
-
-
-
-
 
 @media only screen and (max-width: 960px) {
     .container {

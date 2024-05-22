@@ -379,6 +379,11 @@ p {
   border: 1px solid #003049;
 }
 
+@media only screen and (max-width: 960px) {
+  .m-v-o {
+    margin: 8px;
+  }
+}
 /*Inicio Grilla para tratamientos */
 .galeria {
   display: grid;
@@ -454,13 +459,6 @@ p {
 }
 
 /* Fin FAQs */
-/* .iconos-contacto {
-    text-align: center;
-    font-size: 24px;
-} */
-/* .contacto {
-    padding: 32px;
-} */
 /*Inicio Formulario de contacto y datos */
 .container {
   display: flex;
@@ -485,6 +483,10 @@ p {
   color: #fefefe;
   font: 400 normal 14px "Poppins", sans-serif;
 }
+.container .container-form .btn-primary:hover {
+  background-color: #000e16;
+  border: 1px solid #003049;
+}
 
 @media only screen and (max-width: 960px) {
   .container {
@@ -495,6 +497,4 @@ p {
     gap: 8px;
   }
 }
-/*Fin Formulario de contacto y datos*/
-
-/*# sourceMappingURL=estilos.css.map */
+/*Fin Formulario de contacto y datos*//*# sourceMappingURL=estilos.css.map */
