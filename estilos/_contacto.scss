@@ -1,6 +1,6 @@
 /*Inicio Formulario de contacto y datos */
 
-.container {
+.container, .mapa {
     @include flex--row;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-    .container {
+    .container, .mapa {
         @include flex--column;
         justify-content: center;
         align-items: center;
