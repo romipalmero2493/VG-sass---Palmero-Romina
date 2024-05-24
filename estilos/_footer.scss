@@ -1,5 +1,3 @@
-/* Inicio footer */
-
 footer {
     @include flex--column;
     align-items: center;
@@ -26,5 +24,3 @@ footer {
         color: $negro;
     }
 }
-
-/* Fin footer */

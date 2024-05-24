@@ -10,7 +10,6 @@
         align-items: center;
         background-color: $blanco;
         flex-grow: 1;
-        /* Permite que el main crezca para ocupar el espacio restante */
         padding: 16px;
     }
 
@@ -96,9 +95,6 @@
     }
 }
 
-
-
-/* Estilos para dispositivos móviles */
 @media only screen and (max-width: 960px) {
     .logo-header {
         display: none;
