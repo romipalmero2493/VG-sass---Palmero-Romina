@@ -442,14 +442,25 @@ p {
 }
 
 /* Fin FAQs */
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+@media only screen and (max-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
 }
-.container .container-form {
+@media only screen and (min-width: 961px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.container-form {
   background-color: #e6eef4;
   height: 100%;
   width: 344px;
@@ -460,12 +471,12 @@ p {
   color: #003049;
   box-shadow: 0px 0px 8px gray;
 }
-.container .container-form .btn-primary {
+.container-form .btn-primary {
   background-color: #003049;
   color: #fefefe;
   font: 400 normal 14px "Poppins", sans-serif;
 }
-.container .container-form .btn-primary:hover {
+.container-form .btn-primary:hover {
   background-color: #000e16;
   border: 1px solid #003049;
 }
